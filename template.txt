@@ -1,0 +1,43 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=
+OLD LINE! (discord.js)
+=-=-=-=-=-=-=-=-=-=-=-=-=
+const discord = require('discord.js');
+const client = new discord.Client({partials :["MESSAGE", "CHANNEL", "REACTION"]});
+
+const mySecret = process.env['TOKEN']
+
+client.once('ready', () => {
+  client.user.setActivity("Under Maintenance");
+  client.user.setStatus("dnd")
+  console.log('nurjavier BOT V2 is now online');
+});
+
+
+client.login(mySecret);
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=
+NEW LINE! (eris)
+=-=-=-=-=-=-=-=-=-=-=-=-=
+const mySecret = process.env['TOKEN']
+const KeepAlive = require('./server.js');
+
+const bot = new Eris("Bot " + mySecret, {
+    getALLUsers: true,
+    intents: ["guildPresences", "guildMembers", "guilds", "guildMessages"]
+});
+
+
+-= V Paling bawah V =-
+
+KeepAlive();
+
+
+ const embed = new Eris.RichEmbed()
+        .setColor(0x7289DA)
+        .setDescription("description")
+        .setAuthor(message.guild.name)
+        .addField("fields", stripIndents`
+        value...`)
+        .addField("fields 2", stripIndents`
+        value...`)
