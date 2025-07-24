@@ -33,7 +33,7 @@ bot.on("messageCreate", async message => {
           timestamp: new Date(),
           color: 0x7289DA,
           footer: {
-            text: "by nurjavier8789#0109"
+            text: "by nurjavier8789"
           },
           fields: [
               {name: "`/serverinfo`", value: "see more info this server"},
