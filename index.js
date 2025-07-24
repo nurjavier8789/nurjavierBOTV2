@@ -1,6 +1,5 @@
 const Eris = require("eris");
 const mySecret = process.env['TOKEN']
-const KeepAlive = require('./server.js')
 
 const bot = new Eris("Bot " + mySecret, {
     getALLUsers: true,
@@ -151,7 +150,5 @@ bot.on("messageCreate", async message => {
         return message.channel.createMessage({embed: embed, messageReferenceID: message.id});
     };
 });
-
-KeepAlive()
 
 bot.connect();
